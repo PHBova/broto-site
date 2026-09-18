@@ -310,3 +310,20 @@ ul, ol { list-style: none; }
   .front { min-height: 200px; }
   .nav__cta { padding: 0 14px; font-size: .875rem; }
 }
+
+/* raízes que crescem: máscara radial a partir do topo do talo (50% 52% da imagem) */
+.hero__roots, .footer__roots {
+  --grow: 100; --px: 0px; --py: 0px;
+  -webkit-mask-image: radial-gradient(ellipse 75% 95% at 50% 52%, #000 calc(var(--grow) * 1% - 14%), transparent calc(var(--grow) * 1%));
+          mask-image: radial-gradient(ellipse 75% 95% at 50% 52%, #000 calc(var(--grow) * 1% - 14%), transparent calc(var(--grow) * 1%));
+  transform: translate(calc(-50% + var(--px)), var(--py));
+  will-change: transform;
+}
+
+/* abertura centrada: o talo nasce sob o título */
+.hero { align-items: center; text-align: center; }
+.hero__line--shift { padding-left: 0; }
+.hero__foot { flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; }
+.hero__intro { max-width: 44ch; }
+@media (max-width: 860px) { .hero__line--shift { padding-left: 0; } .hero__foot { align-items: center; } }
+.hero__intro { color: rgb(245 240 224 / .9); }
