@@ -8,166 +8,182 @@
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#0D2B02">
 <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
 
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="nav" data-nav>
-  <nav class="nav__pill" aria-label="Principal">
+  <nav class="nav__bar" aria-label="Principal">
+    <a class="nav__logo" href="#topo" aria-label="broto.digital, voltar ao topo">
+      <svg viewBox="0 0 598 130" aria-hidden="true"><use href="#logo"/></svg>
+    </a>
     <ul class="nav__links">
       <li><a href="#hub">O hub</a></li>
       <li><a href="#criadores">Criadores</a></li>
       <li><a href="#marcas">Marcas</a></li>
       <li><a href="#metodo">Método</a></li>
     </ul>
-    <a class="nav__logo" href="#topo" aria-label="broto.digital, voltar ao topo">
-      <svg viewBox="0 0 598 130" aria-hidden="true"><use href="#logo"/></svg>
-    </a>
-    <a class="btn btn--accent nav__cta" href="#contato">Fale com a gente</a>
+    <a class="btn btn--sm nav__cta" href="#contato">Fale com a gente</a>
   </nav>
 </header>
 
 <main id="conteudo">
 
   <!-- 01 · abertura -->
-  <section class="hero" id="topo">
+  <section class="hero is-dark" id="topo">
     <img class="hero__roots" src="assets/tex/roots.png" alt="" aria-hidden="true">
-    <h1 class="hero__title">
-      <span class="hero__line">Do conteúdo</span>
-      <span class="hero__line hero__line--shift">ao resultado.</span>
-    </h1>
-    <div class="hero__foot">
-      <p class="hero__intro">Hub Digital de Mídia e Conteúdo. Somos a ponte entre quem precisa se comunicar e quem sabe se conectar.</p>
-      <p class="label label--inverse">desde 2021 · São Paulo</p>
+    <div class="hero__copy">
+      <h1 class="hero__title">Do conteúdo<br>ao resultado.</h1>
+      <p class="hero__lead">Hub Digital de Mídia e Conteúdo. Somos a ponte entre quem precisa se comunicar e quem sabe se conectar.</p>
+      <div class="actions actions--center">
+        <a class="btn" href="#contato">Fale com a gente</a>
+        <a class="more" href="#hub">Conheça o hub</a>
+      </div>
+      <p class="hero__meta">desde 2021 · São Paulo</p>
     </div>
   </section>
 
   <!-- 02 · manifesto -->
-  <section class="manifesto">
-    <img class="manifesto__trace" src="assets/tex/var1_green.png" alt="" aria-hidden="true">
+  <section class="section manifesto">
     <p class="manifesto__text reveal">Um hub de soluções para o <em>mercado publicitário</em> e a <em>Creator Economy</em>. Transformamos ideias em conteúdo, e conteúdo em narrativas que conectam as marcas com o digital.</p>
   </section>
 
   <!-- 03 · números -->
-  <section class="section" id="numeros" aria-labelledby="numeros-t">
-    <div class="section__head">
-      <h2 class="label" id="numeros-t">broto em números</h2>
-      <p class="section__lead">Fortalecendo a cena digital desde 2021, com uma rede de criadores e marcas que cresce junto.</p>
+  <section class="section section--alt" id="numeros" aria-labelledby="numeros-t">
+    <div class="wrap">
+      <header class="section__head">
+        <h2 class="section__title" id="numeros-t">Broto em números.</h2>
+        <p class="section__lead">Fortalecendo a cena digital desde 2021, com uma rede de criadores e marcas que cresce junto.</p>
+      </header>
+      <ul class="stats">
+        <li class="stat reveal"><span class="stat__n">+400</span><span class="stat__t">marcas atendidas</span></li>
+        <li class="stat reveal"><span class="stat__n">+50</span><span class="stat__t">criadores em projetos</span></li>
+        <li class="stat reveal"><span class="stat__n">1,7&nbsp;bi</span><span class="stat__t">impactos totais em 2025</span></li>
+        <li class="stat reveal"><span class="stat__n">+9&nbsp;mil</span><span class="stat__t">conteúdos plugados em 2025</span></li>
+      </ul>
     </div>
-    <ul class="stats">
-      <li class="stat reveal"><span class="stat__n">+400</span><span class="stat__t">marcas atendidas</span></li>
-      <li class="stat reveal"><span class="stat__n">+50</span><span class="stat__t">criadores em projetos</span></li>
-      <li class="stat reveal"><span class="stat__n">1,7&nbsp;bi</span><span class="stat__t">impactos totais em 2025</span></li>
-      <li class="stat reveal"><span class="stat__n">+9&nbsp;mil</span><span class="stat__t">conteúdos plugados em 2025</span></li>
-    </ul>
   </section>
 
   <!-- 04 · o hub -->
   <section class="section" id="hub" aria-labelledby="hub-t">
-    <div class="section__head">
-      <h2 class="label" id="hub-t">o hub · cinco frentes</h2>
-      <p class="section__lead">Um hub, cinco frentes, um resultado. Cada frente tem a sua cor e trabalha com as outras.</p>
+    <div class="wrap">
+      <header class="section__head">
+        <h2 class="section__title" id="hub-t">O hub. Cinco frentes.</h2>
+        <p class="section__lead">Um hub, cinco frentes, um resultado. Cada frente tem a sua cor e trabalha com as outras.</p>
+      </header>
+      <ul class="fronts">
+        <li class="front front--content reveal">
+          <p class="front__tag">folha</p>
+          <h3 class="front__name"><svg viewBox="0 0 264 360" aria-hidden="true"><use href="#symbol"/></svg><span>broto<b>.content</b></span></h3>
+          <p class="front__desc">Produção de conteúdo estratégico, do roteiro à entrega.</p>
+        </li>
+        <li class="front front--hub reveal">
+          <p class="front__tag">terra</p>
+          <h3 class="front__name"><svg viewBox="0 0 264 360" aria-hidden="true"><use href="#symbol"/></svg><span>broto<b>.hub</b></span></h3>
+          <p class="front__desc">Central de operações e inteligência de mídia.</p>
+        </li>
+        <li class="front front--digital reveal">
+          <p class="front__tag">água</p>
+          <h3 class="front__name"><svg viewBox="0 0 264 360" aria-hidden="true"><use href="#symbol"/></svg><span>broto<b>.digital</b></span></h3>
+          <p class="front__desc">Performance e distribuição digital.</p>
+        </li>
+        <li class="front front--creator reveal">
+          <p class="front__tag">flor</p>
+          <h3 class="front__name"><svg viewBox="0 0 264 360" aria-hidden="true"><use href="#symbol"/></svg><span>broto<b>.creator</b></span></h3>
+          <p class="front__desc">Rede de criadores e influenciadores.</p>
+        </li>
+        <li class="front front--ads reveal">
+          <p class="front__tag">sol</p>
+          <h3 class="front__name"><svg viewBox="0 0 264 360" aria-hidden="true"><use href="#symbol"/></svg><span>broto<b>.ads</b></span></h3>
+          <p class="front__desc">Mídia paga que leva o conteúdo mais longe.</p>
+        </li>
+      </ul>
     </div>
-    <ul class="fronts">
-      <li class="front front--content reveal">
-        <p class="front__name"><svg viewBox="0 0 264 360" aria-hidden="true"><use href="#symbol"/></svg><span>broto<b>.content</b></span></p>
-        <p class="front__desc">Produção de conteúdo estratégico, do roteiro à entrega.</p>
-        <p class="front__tag">folha</p>
-      </li>
-      <li class="front front--hub reveal">
-        <p class="front__name"><svg viewBox="0 0 264 360" aria-hidden="true"><use href="#symbol"/></svg><span>broto<b>.hub</b></span></p>
-        <p class="front__desc">Central de operações e inteligência de mídia.</p>
-        <p class="front__tag">terra</p>
-      </li>
-      <li class="front front--digital reveal">
-        <p class="front__name"><svg viewBox="0 0 264 360" aria-hidden="true"><use href="#symbol"/></svg><span>broto<b>.digital</b></span></p>
-        <p class="front__desc">Performance e distribuição digital.</p>
-        <p class="front__tag">água</p>
-      </li>
-      <li class="front front--creator reveal">
-        <p class="front__name"><svg viewBox="0 0 264 360" aria-hidden="true"><use href="#symbol"/></svg><span>broto<b>.creator</b></span></p>
-        <p class="front__desc">Rede de criadores e influenciadores.</p>
-        <p class="front__tag">flor</p>
-      </li>
-      <li class="front front--ads reveal">
-        <p class="front__name"><svg viewBox="0 0 264 360" aria-hidden="true"><use href="#symbol"/></svg><span>broto<b>.ads</b></span></p>
-        <p class="front__desc">Mídia paga que leva o conteúdo mais longe.</p>
-        <p class="front__tag">sol</p>
-      </li>
-    </ul>
   </section>
 
-  <!-- 05 · criadores -->
-  <section class="section" id="criadores" aria-labelledby="criadores-t">
-    <div class="section__head">
-      <h2 class="label" id="criadores-t">criadores · portfólio</h2>
-      <p class="section__lead">Vozes que o público já escolheu. Cada criador fala com uma audiência própria, e a marca entra na conversa que já existe.</p>
+  <!-- 05 · criadores: carrossel de largura cheia -->
+  <section class="section section--alt" id="criadores" aria-labelledby="criadores-t">
+    <div class="wrap">
+      <header class="section__head">
+        <h2 class="section__title" id="criadores-t">Criadores.</h2>
+        <p class="section__lead">Vozes que o público já escolheu. Cada criador fala com uma audiência própria, e a marca entra na conversa que já existe.</p>
+      </header>
     </div>
-    <ul class="creators" data-scroll>
-      <li class="creator reveal"><img src="assets/img/creator-podpah.jpg" alt="Apresentadores do PodPah no estúdio" loading="lazy"><p class="creator__name">PodPah</p><p class="creator__meta">podcast<br><span>@podpah</span></p></li>
-      <li class="creator reveal"><img src="assets/img/creator-tiagol.jpg" alt="Tiago Leifert no estúdio do TiaGOL" loading="lazy"><p class="creator__name">TiaGOL</p><p class="creator__meta">futebol e entretenimento<br><span>@tiagoleifert</span></p></li>
-      <li class="creator reveal"><img src="assets/img/creator-intel.jpg" alt="Estúdio do Inteligência Ltda" loading="lazy"><p class="creator__name">Inteligência Ltda</p><p class="creator__meta">podcast<br><span>@inteligencialtda</span></p></li>
-      <li class="creator reveal"><img src="assets/img/creator-jozao.jpg" alt="Jozão em análise de futebol" loading="lazy"><p class="creator__name">Jozão</p><p class="creator__meta">futebol<br><span>@jozaofutebol</span></p></li>
-      <li class="creator reveal"><img src="assets/img/creator-charla.jpg" alt="Apresentadores do Charla Podcast" loading="lazy"><p class="creator__name">Charla</p><p class="creator__meta">podcast<br><span>@charlapodcast</span></p></li>
-      <li class="creator reveal"><img src="assets/img/creator-nerd.jpg" alt="Arte do NerdCast" loading="lazy"><p class="creator__name">NerdCast</p><p class="creator__meta">cultura pop<br><span>@jovemnerd</span></p></li>
+    <ul class="creators" data-carousel tabindex="0" aria-label="Criadores do portfólio">
+      <li class="creator"><img src="assets/img/creator-podpah.jpg" alt="Apresentadores do PodPah no estúdio" loading="lazy"><p class="creator__meta">podcast</p><div><h3 class="creator__name">PodPah</h3><p class="creator__handle">@podpah</p></div></li>
+      <li class="creator"><img src="assets/img/creator-tiagol.jpg" alt="Tiago Leifert no estúdio do TiaGOL" loading="lazy"><p class="creator__meta">futebol e entretenimento</p><div><h3 class="creator__name">TiaGOL</h3><p class="creator__handle">@tiagoleifert</p></div></li>
+      <li class="creator"><img src="assets/img/creator-intel.jpg" alt="Estúdio do Inteligência Ltda" loading="lazy"><p class="creator__meta">podcast</p><div><h3 class="creator__name">Inteligência Ltda</h3><p class="creator__handle">@inteligencialtda</p></div></li>
+      <li class="creator"><img src="assets/img/creator-jozao.jpg" alt="Jozão em análise de futebol" loading="lazy"><p class="creator__meta">futebol</p><div><h3 class="creator__name">Jozão</h3><p class="creator__handle">@jozaofutebol</p></div></li>
+      <li class="creator"><img src="assets/img/creator-charla.jpg" alt="Apresentadores do Charla Podcast" loading="lazy"><p class="creator__meta">podcast</p><div><h3 class="creator__name">Charla</h3><p class="creator__handle">@charlapodcast</p></div></li>
+      <li class="creator"><img src="assets/img/creator-nerd.jpg" alt="Arte do NerdCast" loading="lazy"><p class="creator__meta">cultura pop</p><div><h3 class="creator__name">NerdCast</h3><p class="creator__handle">@jovemnerd</p></div></li>
     </ul>
+    <div class="wrap paddles">
+      <button class="paddle" type="button" data-dir="-1" aria-label="Criadores anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg></button>
+      <button class="paddle" type="button" data-dir="1" aria-label="Próximos criadores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></button>
+    </div>
   </section>
 
   <!-- 06 · marcas -->
-  <section class="band" id="marcas" aria-labelledby="marcas-t">
-    <div class="band__copy">
-      <p class="label label--inverse">marcas</p>
-      <h2 class="band__title" id="marcas-t">Marcas que já cresceram com a gente.</h2>
-      <p class="band__text">De bens de consumo a tecnologia, mais de 400 marcas já colocaram o seu conteúdo nas vozes da nossa rede.</p>
+  <section class="section" id="marcas" aria-labelledby="marcas-t">
+    <div class="wrap">
+      <div class="band is-dark">
+        <div class="band__copy">
+          <p class="eyebrow">Marcas</p>
+          <h2 class="band__title" id="marcas-t">Marcas que já cresceram com a gente.</h2>
+          <p class="band__text">De bens de consumo a tecnologia, mais de 400 marcas já colocaram o seu conteúdo nas vozes da nossa rede.</p>
+        </div>
+        <img class="band__wall" src="assets/img/logos-wall.png" width="1800" height="1640" alt="Logos de marcas atendidas: Bauducco, Estrella Galicia, Coca-Cola, Xbox, Smart Fit, Amazon, Claro, Nubank, Shell, BYD, Acer, Nestlé, OpenAI, Liv Up, OXXO, KitKat, Insider e Guaraná Antarctica" loading="lazy">
+      </div>
     </div>
-    <img class="band__wall" src="assets/img/logos-wall.png" width="1800" height="1640" alt="Logos de marcas atendidas: Bauducco, Estrella Galicia, Coca-Cola, Xbox, Smart Fit, Amazon, Claro, Nubank, Shell, BYD, Acer, Nestlé, OpenAI, Liv Up, OXXO, KitKat, Insider e Guaraná Antarctica" loading="lazy">
   </section>
 
   <!-- 07 · método -->
-  <section class="section" id="metodo" aria-labelledby="metodo-t">
-    <div class="section__head">
-      <h2 class="label" id="metodo-t">como trabalhamos</h2>
-      <p class="section__lead">Do conteúdo ao resultado, em cinco passos. Em média, poucas semanas separam o briefing do primeiro conteúdo no ar.</p>
+  <section class="section section--alt" id="metodo" aria-labelledby="metodo-t">
+    <div class="wrap">
+      <header class="section__head">
+        <h2 class="section__title" id="metodo-t">Como trabalhamos.</h2>
+        <p class="section__lead">Do conteúdo ao resultado, em cinco passos. Em média, poucas semanas separam o briefing do primeiro conteúdo no ar.</p>
+      </header>
+      <ol class="steps">
+        <li class="step reveal"><span class="step__n">01</span><h3>Diagnóstico</h3><p>Entendemos objetivo, público e tom da marca.</p></li>
+        <li class="step reveal"><span class="step__n">02</span><h3>Curadoria</h3><p>Selecionamos os criadores certos do portfólio.</p></li>
+        <li class="step reveal"><span class="step__n">03</span><h3>Produção</h3><p>Roteiro e formato na língua de cada canal.</p></li>
+        <li class="step reveal"><span class="step__n">04</span><h3>Ativação</h3><p>Branded content, live, inserção ou co-criação.</p></li>
+        <li class="step reveal"><span class="step__n">05</span><h3>Mensuração</h3><p>Resultado de alcance, engajamento e conversão.</p></li>
+      </ol>
     </div>
-    <ol class="steps">
-      <li class="step reveal"><span class="step__n">01</span><h3>Diagnóstico</h3><p>Entendemos objetivo, público e tom da marca.</p></li>
-      <li class="step reveal"><span class="step__n">02</span><h3>Curadoria</h3><p>Selecionamos os criadores certos do portfólio.</p></li>
-      <li class="step reveal"><span class="step__n">03</span><h3>Produção</h3><p>Roteiro e formato na língua de cada canal.</p></li>
-      <li class="step reveal"><span class="step__n">04</span><h3>Ativação</h3><p>Branded content, live, inserção ou co-criação.</p></li>
-      <li class="step reveal"><span class="step__n">05</span><h3>Mensuração</h3><p>Resultado de alcance, engajamento e conversão.</p></li>
-    </ol>
   </section>
 
   <!-- 08 · contato -->
-  <section class="cta" id="contato" aria-labelledby="contato-t">
-    <img class="cta__trace" src="assets/tex/var3_cream.png" alt="" aria-hidden="true">
-    <div class="cta__copy">
-      <p class="label label--inverse">vamos juntos</p>
+  <section class="section cta is-dark" id="contato" aria-labelledby="contato-t">
+    <div class="wrap cta__inner">
+      <p class="eyebrow">Vamos juntos</p>
       <h2 class="cta__title" id="contato-t">Vamos colocar a sua marca na conversa que a audiência já está tendo.</h2>
-      <div class="cta__actions">
-        <a class="btn btn--accent" href="https://wa.me/5511900000000" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn btn--ghost" href="mailto:tiego@brotodigital.com">tiego@brotodigital.com</a>
-        <a class="btn btn--ghost" href="https://www.instagram.com/brotodigital/" target="_blank" rel="noopener">@brotodigital</a>
+      <div class="actions actions--center">
+        <a class="btn" href="https://wa.me/5511900000000" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="more" href="mailto:tiego@brotodigital.com">tiego@brotodigital.com</a>
+        <a class="more" href="https://www.instagram.com/brotodigital/" target="_blank" rel="noopener">@brotodigital</a>
       </div>
+      <img class="cta__photo" src="assets/img/foto-publico.jpg" alt="Plateia filmando uma gravação ao vivo" loading="lazy">
     </div>
-    <img class="cta__photo" src="assets/img/foto-publico.jpg" alt="Plateia filmando uma gravação ao vivo" loading="lazy">
   </section>
 
 </main>
 
 <footer class="footer">
-  <div class="footer__row">
-    <p>© 2026 Broto Conteúdo Digital</p>
-    <p><a href="https://brotodigital.com">brotodigital.com</a> · <a href="https://www.instagram.com/brotodigital/">@brotodigital</a></p>
-    <p class="footer__note">protótipo de teste · setembro de 2026</p>
+  <div class="wrap">
+    <p class="footer__note">Protótipo de teste, setembro de 2026. Fotos de criadores e logos de marcas pertencem aos donos.</p>
+    <div class="footer__row">
+      <p>© 2026 Broto Conteúdo Digital</p>
+      <ul class="footer__links">
+        <li><a href="https://brotodigital.com">brotodigital.com</a></li>
+        <li><a href="https://www.instagram.com/brotodigital/">@brotodigital</a></li>
+        <li><a href="assinatura/">Assinatura de e-mail</a></li>
+      </ul>
+    </div>
   </div>
-  <svg class="footer__mark" viewBox="0 0 598 130" role="img" aria-label="broto.digital"><use href="#logo"/></svg>
-  <img class="footer__roots" src="assets/tex/roots.png" alt="" aria-hidden="true">
 </footer>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -177,6 +193,6 @@
   </defs>
 </svg>
 
-<script src="main.js" defer></script>
+<script src="main.js?v=4" defer></script>
 </body>
 </html>

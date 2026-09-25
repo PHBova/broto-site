@@ -1,14 +1,14 @@
-// Menu claro sobre seções claras e entrada sóbria dos blocos.
+// Barra escura sobre seções escuras e entrada sóbria dos blocos.
 const nav = document.querySelector('[data-nav]');
-const darks = [...document.querySelectorAll('.hero, .band, .cta, .footer')];
+const darks = [...document.querySelectorAll('.hero, .cta')];
 
 function updateNav() {
-  const y = 44; // altura do centro do menu
+  const y = 24; // centro da barra de 48
   const onDark = darks.some((el) => {
     const r = el.getBoundingClientRect();
     return r.top <= y && r.bottom >= y;
   });
-  nav.classList.toggle('is-light', !onDark);
+  nav.classList.toggle('on-dark', onDark);
 }
 updateNav();
 addEventListener('scroll', updateNav, { passive: true });
@@ -32,7 +32,6 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
 const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const roots = [
   { el: document.querySelector('.hero__roots'), box: document.querySelector('.hero'), hero: true },
-  { el: document.querySelector('.footer__roots'), box: document.querySelector('.footer'), hero: false },
 ].filter((r) => r.el);
 
 if (!calm && roots.length) {
@@ -69,4 +68,26 @@ if (!calm && roots.length) {
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
+}
+
+// Carrossel de criadores: botões avançam um card; somem no início e no fim.
+const track = document.querySelector('[data-carousel]');
+const paddles = [...document.querySelectorAll('.paddle')];
+if (track && paddles.length) {
+  const step = () => {
+    const card = track.querySelector('li');
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    return card ? card.getBoundingClientRect().width + gap : track.clientWidth * 0.8;
+  };
+  const sync = () => {
+    const max = track.scrollWidth - track.clientWidth - 2;
+    paddles[0].disabled = track.scrollLeft <= 2;
+    paddles[1].disabled = track.scrollLeft >= max;
+  };
+  paddles.forEach((b) => b.addEventListener('click', () => {
+    track.scrollBy({ left: step() * Number(b.dataset.dir), behavior: calm ? 'auto' : 'smooth' });
+  }));
+  track.addEventListener('scroll', sync, { passive: true });
+  addEventListener('resize', sync);
+  sync();
 }
