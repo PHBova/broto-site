@@ -16,9 +16,8 @@
 }
 
 .sig-main {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: clamp(24px, 5vw, 64px) var(--m) clamp(64px, 8vw, 120px);
+  /* a margem --g já centra a largura útil de 1260; max-width aqui somava as duas e espremia a prévia */
+  padding: clamp(24px, 5vw, 64px) var(--g) clamp(64px, 8vw, 120px);
 }
 
 .sig-intro { max-width: 640px; margin-bottom: clamp(32px, 4vw, 48px); }
@@ -98,8 +97,11 @@
 .sig-steps p { font-size: 0.9375rem; color: var(--neutral-600); }
 .sig-steps em { font-style: normal; color: var(--ink); }
 
-@media (max-width: 860px) {
+/* abaixo de 1180 a prévia não cabe ao lado do formulário: empilha */
+@media (max-width: 1180px) {
   .sig-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
   .sig-steps { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {

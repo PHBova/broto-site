@@ -91,8 +91,21 @@ function ready() {
   return okName && okEmail;
 }
 
+// Tela mais estreita que a assinatura: reduz a prévia inteira em vez de cortar.
+const prevTitle = document.getElementById('prev-t');
+function fit() {
+  out.style.zoom = '';
+  const room = out.parentElement.clientWidth
+    - parseFloat(getComputedStyle(out.parentElement).paddingLeft)
+    - parseFloat(getComputedStyle(out.parentElement).paddingRight);
+  const scale = Math.min(1, room / out.scrollWidth);
+  if (scale < 1) out.style.zoom = scale.toFixed(3);
+  prevTitle.textContent = scale < 1 ? 'Prévia reduzida para caber na tela' : 'Prévia no tamanho real';
+}
+
 function render() {
   out.innerHTML = build(values());
+  fit();
   const ok = ready();
   btnRich.disabled = !ok;
   btnHtml.disabled = !ok;
@@ -145,6 +158,7 @@ f.email.addEventListener('blur', () => {
   f.email.setAttribute('aria-invalid', v && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? 'true' : 'false');
 });
 form.addEventListener('input', render);
+addEventListener('resize', fit);
 form.addEventListener('submit', (e) => e.preventDefault());
 btnRich.addEventListener('click', copyRich);
 btnHtml.addEventListener('click', copyHtml);
