@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assinatura de e-mail · broto.digital</title>
+<meta name="description" content="Gerador da assinatura de e-mail da Broto.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F5F0E0">
+<link rel="icon" href="../assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="assinatura.css">
+</head>
+<body class="sig-page">
+
+<header class="sig-top">
+  <a class="sig-top__logo" href="../" aria-label="broto.digital, voltar ao site">
+    <span class="sig-top__mark" aria-hidden="true"></span>
+  </a>
+  <p class="label">ferramenta interna</p>
+</header>
+
+<main class="sig-main">
+  <div class="sig-intro">
+    <h1 class="sig-title">Assinatura de e-mail</h1>
+    <p class="sig-lead">Preencha, confira a prévia e copie. A assinatura cola pronta no Gmail, no Apple Mail e no Outlook.</p>
+  </div>
+
+  <div class="sig-grid">
+    <form class="sig-form" id="sig-form" autocomplete="on" novalidate>
+      <div class="field">
+        <label for="f-name">Nome</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Nome Sobrenome" required>
+      </div>
+      <div class="field">
+        <label for="f-role">Cargo <span class="field__opt">opcional</span></label>
+        <input id="f-role" name="role" type="text" autocomplete="organization-title" placeholder="Cargo">
+      </div>
+      <div class="field">
+        <label for="f-phone">Telefone <span class="field__opt">opcional</span></label>
+        <input id="f-phone" name="phone" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="11 90000-0000">
+      </div>
+      <div class="field">
+        <label for="f-email">E-mail</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" placeholder="nome@brotodigital.com" required>
+      </div>
+      <p class="sig-form__note">O site <strong>brotodigital.com</strong> entra em todas as assinaturas.</p>
+    </form>
+
+    <section class="sig-preview" aria-labelledby="prev-t">
+      <div class="sig-preview__head">
+        <h2 class="label" id="prev-t">prévia no tamanho real</h2>
+      </div>
+      <div class="sig-mail">
+        <div class="sig-mail__body" aria-hidden="true">
+          <span></span><span></span><span class="short"></span>
+        </div>
+        <div class="sig-mail__sig" id="sig-out"></div>
+      </div>
+      <div class="sig-actions">
+        <button class="btn btn--accent" type="button" id="copy-rich">Copiar assinatura</button>
+        <button class="btn btn--line" type="button" id="copy-html">Copiar HTML</button>
+        <p class="sig-status" id="sig-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </div>
+
+  <section class="sig-help" aria-labelledby="help-t">
+    <h2 class="label" id="help-t">como instalar</h2>
+    <ol class="sig-steps">
+      <li>
+        <h3>Gmail</h3>
+        <p>Clique em <em>Copiar assinatura</em>. No Gmail, abra Configurações, Ver todas as configurações, Geral, Assinatura. Crie uma nova, cole na caixa e salve no fim da página.</p>
+      </li>
+      <li>
+        <h3>Apple Mail</h3>
+        <p>Em Mail, Ajustes, Assinaturas, crie uma nova e desmarque <em>Sempre usar minha fonte padrão de mensagem</em>. Cole na caixa da direita.</p>
+      </li>
+      <li>
+        <h3>Outlook</h3>
+        <p>Em Configurações, Contas, Assinaturas, crie uma nova e cole. No Outlook clássico, o caminho é Arquivo, Opções, Email, Assinaturas.</p>
+      </li>
+    </ol>
+  </section>
+</main>
+
+<script src="assinatura.js" defer></script>
+</body>
+</html>

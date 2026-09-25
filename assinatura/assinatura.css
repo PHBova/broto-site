@@ -1,0 +1,114 @@
+/* Gerador de assinatura. Base e tokens em ../styles.css; controles na régua do macOS 27
+   (texto 13/16, rótulo 11/14, campo com raio 8), pele da Broto. */
+
+.sig-page {
+  --white: #FFFFFF;
+  --neutral-200: #E4E0D3;
+  --neutral-400: #ABA89E;
+  background: var(--cream);
+}
+
+.sig-top {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 24px var(--m);
+}
+.sig-top__logo { display: block; width: 132px; color: var(--green-800); }
+.sig-top__mark {
+  display: block; aspect-ratio: 598 / 130;
+  background: currentColor;
+  -webkit-mask: url(../assets/brand/logo.svg) no-repeat center / contain;
+  mask: url(../assets/brand/logo.svg) no-repeat center / contain;
+}
+
+.sig-main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 64px) var(--m) clamp(64px, 8vw, 120px);
+}
+
+.sig-intro { max-width: 640px; margin-bottom: clamp(32px, 4vw, 48px); }
+.sig-title { font-size: var(--title); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; }
+.sig-lead { margin-top: 16px; font-size: 1.125rem; color: var(--neutral-600); }
+
+.sig-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* formulário */
+.sig-form {
+  display: grid; gap: 16px;
+  padding: 24px;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-card);
+}
+.field { display: grid; gap: 6px; }
+.field label { font-size: 0.8125rem; line-height: 1rem; font-weight: 600; }
+.field__opt { font-weight: 400; color: var(--neutral-600); }
+.field input {
+  height: 36px; padding: 0 12px;
+  font: 400 1rem/1 var(--font); color: var(--ink); /* 16px: o iOS não dá zoom no foco */
+  background: var(--white);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-cell);
+  transition: border-color .15s, box-shadow .15s;
+}
+.field input::placeholder { color: var(--neutral-400); }
+.field input:hover { border-color: var(--neutral-400); }
+.field input:focus { outline: none; border-color: var(--green-500); box-shadow: 0 0 0 3px rgb(106 173 0 / 0.25); }
+.field input[aria-invalid="true"] { border-color: var(--v-creator); }
+.sig-form__note { font-size: 0.8125rem; line-height: 1.4; color: var(--neutral-600); }
+.sig-form__note strong { color: var(--green-800); font-weight: 600; }
+
+/* prévia: um e-mail em branco, porque a assinatura sempre roda em fundo claro */
+.sig-preview {
+  padding: 24px;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-card);
+  min-width: 0;
+}
+.sig-preview__head { margin-bottom: 16px; }
+.sig-mail {
+  padding: 32px 28px;
+  background: var(--white);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--r-panel);
+  overflow-x: auto;
+}
+.sig-mail__body { display: grid; gap: 8px; margin-bottom: 28px; }
+.sig-mail__body span { display: block; height: 8px; border-radius: 4px; background: var(--cream); }
+.sig-mail__body .short { width: 40%; }
+.sig-mail__sig { min-height: 42px; }
+.sig-mail__sig img { max-width: none; } /* a base do site encolhe img; e-mail não */
+
+.sig-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 20px; }
+.btn { border: 0; cursor: pointer; }
+.btn--line { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1px var(--hairline); }
+.btn--line:hover { box-shadow: inset 0 0 0 1px var(--ink); }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+.sig-status { font: 500 0.75rem/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--green-800); }
+
+/* instalação */
+.sig-help { margin-top: clamp(48px, 6vw, 80px); }
+.sig-steps {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;
+  margin-top: 16px;
+  counter-reset: step;
+}
+.sig-steps li { padding-top: 16px; border-top: 1px solid var(--hairline); }
+.sig-steps h3 { font-size: 1.0625rem; font-weight: 600; margin-bottom: 6px; }
+.sig-steps p { font-size: 0.9375rem; color: var(--neutral-600); }
+.sig-steps em { font-style: normal; color: var(--ink); }
+
+@media (max-width: 860px) {
+  .sig-grid { grid-template-columns: 1fr; }
+  .sig-steps { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .sig-form, .sig-preview { padding: 16px; border-radius: var(--r-panel); }
+  .sig-mail { padding: 20px 16px; }
+}
